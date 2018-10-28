@@ -18,10 +18,10 @@
     {% endif %}
     {% if page.author %}
     <meta property="article:author" content="{{ page.author }}">
-    <!-- {% endif %}
+    {% endif %}
     {% for tag in page.tags %}
     <meta property="article:tag" content="{{ tag }}">
-    {% endfor %} -->
+    {% endfor %}
     {% else %}
     <meta property="og:type" content="website">
     <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
