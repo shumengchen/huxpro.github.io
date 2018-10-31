@@ -1,16 +1,12 @@
 ---
 layout: post
-title: "linux（cnetos）的apache部署，https配置，和端口映射"
-subtitle: 'Apache deployment of Linux (cnetos), SSL configuration, and domain mapping'
-author: "书蒙尘"
+title: "用github部署个人博客"
+subtitle: 'Deploy a personal blog with github'
+author: "书蒙尘"
 header-style: text
 tags:
-  - linux
-  - centos
-  - apache
-  - SSL
-  - https
-  - 域名
+  - blog
+  - github
 ---
 
 今天终于花了一天的时间终于在github上部署了第一个自己的个人博客，用的是[hux的个人博客]（https://github.com/Huxpro/huxpro.github.io）的主题，本来想在自己服务器上搭的，最后只先在github上搭进行使用了。
