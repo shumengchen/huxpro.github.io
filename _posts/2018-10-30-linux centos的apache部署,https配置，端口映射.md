@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "linux,centos的apache部署，https配置，和端口映射"
+title: "端口映射"
 subtitle: 'abc'
 author: "书蒙尘"
 header-style: text
