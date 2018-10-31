@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "linux（centos）的apache部署，https配置，端口映射"
-subtitle: 'abc'
+subtitle: 'Apache deployment of Linux (centos), SSL configuration, and domain mapping'
 author: "书蒙尘"
 header-style: text
 tags:
