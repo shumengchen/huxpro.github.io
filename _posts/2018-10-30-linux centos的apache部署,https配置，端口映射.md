@@ -13,48 +13,16 @@ tags:
   - 域名
 ---
 
-最新在弄一个小程序https合法域名，搞了一天，发现这是一个麻烦的过程，配置过程中遇到很多麻烦，在这里记录一下，保存自己的配置过程。
-
-我是基于centos系统进行配置，首先先安装apache：
-
-> // 安装httpd
-[root@VM_0_17_centos ~]# yum install httpd -y
-
-> // 查看httpd版本
-[root@VM_0_17_centos ~]# httpd -v
-Server version: Apache/2.4.6 (CentOS)
-Server built:   Jun 27 2018 13:48:59
-
-> // 启动httpd
-[root@VM_0_17_centos ~]# service httpd start
-Redirecting to /bin/systemctl start httpd.service
-
-请求你的服务器ip地址如果访问到![img](/img/201810/apache.png)就安装成功了
+今天终于花了一天的时间终于在github上部署了第一个自己的个人博客，用的是[hux的个人博客]（https://github.com/Huxpro/huxpro.github.io）的主题，本来想在自己服务器上搭的，最后只先在github上搭进行使用了。
 
 ---
 
-SSL配置：可以到阿里云或者腾讯云申请免费的SSL证书，我的证书是在腾讯云申请的，证书通过后下载有解压在Apache中有三个文件![img](/img/201810/SSL.png),这三个文件待会要用
+先去这个[https://github.com/Huxpro/huxpro.github.io]( https://github.com/Huxpro/huxpro.github.io)上fork到自己的github上面，把工程名修改为{github-username}.github.io，类似![img](/img/201810/githubName.png)，这个配置完就能通过{github-username}.github.io或者{github-username}.github.io/index来访问你的博客，可能不会立即生效。
 
+为了让个人博客看起来有自己的标志，可以注册一个域名，当然要进行备案，我是在*腾讯云申请的域名*，[smchen.xyz](https://smchen.xyz)。
 
+1、把域名设置成指定域名到{github-username}.github.io上。
 
-> //安装mod_ssl 
-[root@VM_0_17_centos /]# yum install mod_ssl
-//安装完后会在/etc/httpd/conf.d下生成ssl.conf文件
-
-> //在/etc/httpd下创建ssl文件
-[root@VM_0_17_centos httpd]# mkdir ssl
-//把刚刚ssl证书的三个文件放入这个文件夹，修改conf.d下的ssl.conf
-[root@VM_0_17_centos conf.d]# vim ssl.conf
-
-![img](/img/201810/sslConf.png)
-访问地址，把前面的http改为https，还能访问到页面配置成功了
-
----
-为服务器配置域名，再通过 https://域名 访问到apache
-
----
-配置端口映射，访问其他端口工程
-httpd的conf文件下的httpd.conf末尾处添加这些，就可以在通过 https://域名/blog 访问这个8080端口的项目了
-
-> ProxyPass  /blog http://IP:8080
-ProxyPassReverse  /blog http://IP:8080
+2、在github项目的settings的gitHub page中输入你的域名![img](/img/201810/githubPage.png)
+ 
+ 这样个人博客就搭好了。
