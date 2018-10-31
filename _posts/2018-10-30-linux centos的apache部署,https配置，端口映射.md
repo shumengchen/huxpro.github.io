@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "linux（cnetos）的apache部署，https配置，和端口映射"
-subtitle: "Apache deployment of Linux (cnetos), SSL configuration, and domain mapping"
+subtitle: 'Apache deployment of Linux (cnetos), SSL configuration, and domain mapping'
 author: "书蒙尘"
 header-style: text
 tags:
