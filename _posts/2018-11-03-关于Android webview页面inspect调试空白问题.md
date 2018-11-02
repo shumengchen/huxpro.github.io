@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "安卓的webview通过inspect调试"
+title: "安卓的webview通过inspect调试，出现空白解决办法"
 subtitle: 'About the Android webview page inspect blank space problem'
 author: "书蒙尘"
 header-style: text
