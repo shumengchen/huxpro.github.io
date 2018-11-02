@@ -1,7 +1,6 @@
 ---
-layout: post
-title: "关于Android，webview页面inspect调试空白问题"
-subtitle: 'Apache deployment of Linux (centos), SSL configuration, and domain mapping'
+title: "linux（centos）的apache部署，https配置，端口映射"
+subtitle: 'About the Android webview page inspect blank space problem'
 author: "书蒙尘"
 header-style: text
 tags:
