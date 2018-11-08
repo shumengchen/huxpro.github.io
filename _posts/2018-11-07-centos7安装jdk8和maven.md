@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "centos7安装jdk8和maven"
-subtitle: 'Centos7 installs jdk8 and maven'
+title: "centos7安装jdk8和maven,git安装"
+subtitle: 'Centos7 installs jdk8 and maven,install git'
 author: "书蒙尘"
 header-style: text
 tags:
@@ -50,3 +50,14 @@ export PATH=$PATH:$JAVA_HOME/bin:$M2_HOME/bin
 
 
 ---
+
+安装git
+>//通过yum安装git  
+[root@VM_0_17_centos ~]# yum install -y git  
+//查看git版本  
+[root@VM_0_17_centos ~]# git --version
+//配置ssh密钥，一直enter就好  
+[root@VM_0_17_centos kiln]# ssh-keygen -t rsa -C "975952433@qq.com"  
+//查看ssh  
+[root@VM_0_17_centos kiln]# cd ~/.ssh/  
+[root@VM_0_17_centos .ssh]# cat id_rsa.pub
