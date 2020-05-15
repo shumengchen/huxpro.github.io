@@ -1,0 +1,18 @@
+I",<p>android和html混合开发时，无法调试html页面，可以访问<a href="chrome://inspect/#devices">chrome://inspect/#devices</a>，进行调试。</p>
+
+<p>1、首先你要开起手机usb调试</p>
+
+<p>2、程序以debug运行</p>
+
+<p>若上面都已经弄好在页面中还是无法看到inspect按钮，可在代码中为webview配置</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="c1">//开启webview调试功能</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">Build</span><span class="p">.</span><span class="nx">VERSION</span><span class="p">.</span><span class="nx">SDK_INT</span> <span class="o">&gt;=</span> <span class="nx">Build</span><span class="p">.</span><span class="nx">VERSION_CODES</span><span class="p">.</span><span class="nx">KITKAT</span><span class="p">){</span>
+    <span class="nx">WebView</span><span class="p">.</span><span class="nx">setWebContentsDebuggingEnabled</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+<p>就没问题了。</p>
+:ET

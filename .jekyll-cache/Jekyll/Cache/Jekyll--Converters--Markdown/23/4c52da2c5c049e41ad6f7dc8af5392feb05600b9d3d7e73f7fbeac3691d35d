@@ -1,0 +1,56 @@
+I"�<blockquote>
+  <p>// 初始化<br />
+git init</p>
+</blockquote>
+
+<blockquote>
+  <p>// 添加所有文件或者指定文件<br />
+git add .   ||   git add -A XXX</p>
+</blockquote>
+
+<blockquote>
+  <p>//提交到本地仓库<br />
+git commit -m ‘提交说明’</p>
+</blockquote>
+
+<blockquote>
+  <p>//连接远程仓库<br />
+git remote add origin 远程仓库地址</p>
+</blockquote>
+
+<blockquote>
+  <p>//push代码
+git push -u origin master</p>
+</blockquote>
+
+<p>push时可能会报错<img src="/img/202004/gitpushErr.png" alt="img" /></p>
+<blockquote>
+  <p>//解决办法<br />
+git pull origin master –allow-unrelated-histories</p>
+</blockquote>
+
+<p>若出现本地有原始工程需要完全覆盖</p>
+<blockquote>
+  <p>git fetch –all<br />
+git reset –hard origin/master<br />
+git pull</p>
+</blockquote>
+
+<hr />
+
+<p>关于github不给上传100m以上文件的错误：this exceeds GitHub’s file size limit of 100.00 MB的解决方法</p>
+
+<blockquote>
+  <p>//安装git lfs<br />
+<a href="https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html</a><br />
+//把大文件加入到git large file storage
+git lfs track “xxxxx”</p>
+</blockquote>
+
+<p>在单独提交文件</p>
+<blockquote>
+  <p>git add xxxxxx<br />
+git commit -m “提交内容名称”<br />
+git push origin master</p>
+</blockquote>
+:ET

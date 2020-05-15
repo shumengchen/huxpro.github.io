@@ -13,11 +13,11 @@ future: true
 
 # SNS settings
 RSS: false
-weibo_username:     书蒙尘
+weibo_username:     6094810485
 zhihu_username:     书蒙尘
 github_username:    shumengchen
-twitter_username:   smc
-#facebook_username:  huxpro
+twitter_username:   GGV9FqAzekJ3KQH
+#facebook_username:  smc
 #linkedin_username:  firstname-lastname-idxxxx
 
 
@@ -26,7 +26,7 @@ twitter_username:   smc
 # from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
 highlighter: rouge
 permalink: pretty
-paginate: 10
+paginate: 15
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","README.zh.md"]
 anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
 # If you have timezone issue (e.g. #68) in China, uncomment to use this:
@@ -72,7 +72,7 @@ netease_comment: false
 
 # Google Analytics
 ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
-ga_domain: smchen.xyz
+ga_domain: www.smchen.xyz
 
 
 
@@ -85,7 +85,7 @@ sidebar-avatar: /img/smc_avatar_ny.jpg      # use absolute URL, seeing it's used
 
 # Featured Tags
 featured-tags: true                     # whether or not using Feature-Tags
-featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
+featured-condition-size: 0              # A tag will be featured if the size of it is more than this condition value
 
 
 

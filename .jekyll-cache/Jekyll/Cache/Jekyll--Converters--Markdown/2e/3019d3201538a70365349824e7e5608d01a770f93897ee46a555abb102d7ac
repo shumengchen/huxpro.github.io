@@ -1,0 +1,56 @@
+I"<p>最新在弄一个小程序https合法域名，搞了一天，发现这是一个麻烦的过程，配置过程中遇到很多麻烦，在这里记录一下，保存自己的配置过程。</p>
+
+<p>我是基于centos系统进行配置，首先先安装apache：</p>
+
+<blockquote>
+  <p>// 安装httpd<br />
+[root@VM_0_17_centos ~]# yum install httpd -y</p>
+</blockquote>
+
+<blockquote>
+  <p>// 查看httpd版本<br />
+[root@VM_0_17_centos ~]# httpd -v<br />
+Server version: Apache/2.4.6 (CentOS)<br />
+Server built:   Jun 27 2018 13:48:59</p>
+</blockquote>
+
+<blockquote>
+  <p>// 启动httpd<br />
+[root@VM_0_17_centos ~]# service httpd start<br />
+Redirecting to /bin/systemctl start httpd.service</p>
+</blockquote>
+
+<p>请求你的服务器ip地址如果访问到<img src="/img/201810/apache.png" alt="img" />就安装成功了</p>
+
+<hr />
+
+<p>SSL配置：可以到阿里云或者腾讯云申请免费的SSL证书，我的证书是在腾讯云申请的，证书通过后下载有解压在Apache中有三个文件<img src="/img/201810/SSL.png" alt="img" />,这三个文件待会要用</p>
+
+<blockquote>
+  <p>//安装mod_ssl<br />
+[root@VM_0_17_centos /]# yum install mod_ssl<br />
+//安装完后会在/etc/httpd/conf.d下生成ssl.conf文件</p>
+</blockquote>
+
+<blockquote>
+  <p>//在/etc/httpd下创建ssl文件<br />
+[root@VM_0_17_centos httpd]# mkdir ssl<br />
+//把刚刚ssl证书的三个文件放入这个文件夹，修改conf.d下的ssl.conf<br />
+[root@VM_0_17_centos conf.d]# vim ssl.conf</p>
+</blockquote>
+
+<p><img src="/img/201810/sslConf.png" alt="img" />
+访问地址，把前面的http改为https，还能访问到页面配置成功了</p>
+
+<hr />
+<p>为服务器配置域名，再通过 https://域名 访问到apache</p>
+
+<hr />
+<p>配置端口映射，访问其他端口工程
+httpd的conf文件下的httpd.conf末尾处添加这些，就可以在通过 https://域名/blog 访问这个8080端口的项目了</p>
+
+<blockquote>
+  <p>ProxyPass  /blog http://IP:8080<br />
+ProxyPassReverse  /blog http://IP:8080</p>
+</blockquote>
+:ET
