@@ -1,6 +1,6 @@
 # Hux blog 模板
 
-### [我的博客在这里 &rarr;](http://shumengchen.github.io)
+### [我的博客在这里 &rarr;](http://www.smchen.xyz)
 
 
 ### 关于收到"Page Build Warning"的email
